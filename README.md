@@ -1,3 +1,3 @@
 # Front-End-Labs
 <h1>[TADS]</h1>
-Repositórios dos laboratórios da disciplina de programação Front-end {TADS} 
+<h2>Repositórios dos laboratórios da disciplina de programação Front-end</h2>
