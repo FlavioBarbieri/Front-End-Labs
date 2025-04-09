@@ -8,7 +8,8 @@
     --font-figurecaption:"Big Shoulders Inline", cursive;
 
 }
-body {
+html {
+    scroll-behavior: smooth;
     color: #333333;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif ;
     color: var(--color-base);
@@ -17,6 +18,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 940px;
+}
+
 h1{
     background-image: url(../img/sobre-background.jpg);
     padding: 10px;
@@ -36,6 +39,7 @@ figure {
     text-align: center;
     padding: 15px;
     margin: 30px;
+}
 
 .figcaption {
     font-style: italic;
