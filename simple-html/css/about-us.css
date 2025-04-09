@@ -7,63 +7,68 @@
     --font-second-title:"Emblema One", cursive;
     --font-body:"Roboto", sans-serif;
     --font-figurecaption:"Big Shoulders Inline", cursive;
-
+   
+ 
 }
 html {
     scroll-behavior: smooth;
-    color: #333333;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif ;
+}
+body {
     color: var(--color-base);
     font-family: var(--font-body);
     font-weight: 500;
     margin-left: auto;
     margin-right: auto;
     width: 940px;
+   
 }
-
 h1{
     background-image: url(../img/sobre-background.jpg);
     padding: 10px;
     font-family: var(--font-first-title);
 }
 h2 {
-    border-bottom: 2px groove #333333;
     border-bottom: 2px groove var(--color-base);
     margin-top: 30px;
     font-family: var(--font-second-title);
 }
 figure {
-    background-color: #f2eded;
-    border: 1px solid #ccc;
     background-color: var(--color-base-figure-background);
     border: 1px solid var(--color-base-figure-border);
     text-align: center;
     padding: 15px;
     margin: 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+   
 }
-
-.figcaption {
+figcaption {
     font-style: italic;
     margin-top: 10px;
     font-family: var(--font-figurecaption);
-
+ 
 }
-
-{
+p{
+    padding: 0 45px;
+    text-indent: 15px;
+}
 #centro-distribuicao {
     margin-left: auto;
     margin-right: auto;
     width: 550px;
+ 
 }
-}
-#rodape {
+#footer {
     color: #777;
     margin: 30px 0;
     padding: 30px 0;
     color: var(--color-base-footer);
-    
+   
 }
-#rodape img {
+footer img {
     margin-right: 30px;
     vertical-align: middle;
     width: 94px;
