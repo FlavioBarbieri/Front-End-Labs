@@ -24,3 +24,20 @@ body {
     flex-direction: column;
     gap: 10px;
 }
+
+fieldset{
+    background-color: antiquewhite;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+form{
+    width: 25%;
+}
+
+.div1{
+    display: flex;
+    flex-direction: column;
+}
