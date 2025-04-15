@@ -1,117 +1,176 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #e3f2fd, #f5f7fa);
+    background-color: #f4f7fa;
     color: #333;
 }
 
 header {
-    background-color: #0d47a1;
-    padding: 2rem;
-    text-align: center;
+    background-color: #0A3D62;
     color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFA502;
+}
+
+header nav a {
+    color: white;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #FFA502;
 }
 
 .banner {
-    animation: flutuar 3s infinite ease-in-out;
-    font-size: 2rem;
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    background: linear-gradient(90deg, #0A3D62, #1E5799);
+    color: white;
+    animation: fadeIn 2s ease;
 }
 
-@keyframes flutuar {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+.banner h1 {
+    font-size: 2.5rem;
+}
+
+.banner p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
 }
 
 .planos {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.planos h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #0A3D62;
+}
+
+.cards {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
     flex-wrap: wrap;
-    margin: 4rem auto;
-    max-width: 1200px;
+    gap: 2rem;
+    justify-content: center;
 }
 
-.plano {
+.card {
     background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    width: 280px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.plano:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-
-.selo {
-    background: gold;
-    color: black;
-    font-weight: bold;
-    padding: 0.3rem 0.7rem;
     border-radius: 10px;
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+    padding: 2rem;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: slideUp 1.5s ease;
 }
 
-.destaque {
-    border: 2px solid orange;
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-.plano h2 {
+.card h3 {
+    color: #0A3D62;
     margin-bottom: 1rem;
 }
 
 .preco {
+    color: #FFA502;
     font-size: 2rem;
-    color: #0056ff;
     margin-bottom: 1rem;
-}
-
-.preco span {
-    font-size: 1rem;
-    color: gray;
 }
 
 ul {
     list-style: none;
-    padding: 0;
     margin-bottom: 1.5rem;
 }
 
 ul li {
-    margin: 0.5rem 0;
+    margin-bottom: 0.5rem;
 }
 
-ul li i {
-    color: green;
-    margin-right: 0.5rem;
-}
-
-button {
-    background: transparent;
-    border: 2px solid #0056ff;
-    color: #0056ff;
-    padding: 0.6rem 1.2rem;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s;
-}
-
-button:hover {
-    background: #0056ff;
+a {
+    background-color: #0A3D62;
     color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+a:hover {
+    background-color: #FFA502;
+}
+
+.selo {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #FFA502;
+    color: white;
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 50px;
+}
+
+.destaque {
+    border: 2px solid #FFA502;
 }
 
 footer {
-    background-color: #0d47a1;
+    background-color: #0A3D62;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     margin-top: 3rem;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+/* Responsivo */
+
+@media(max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav {
+        margin-top: 1rem;
+    }
 }
