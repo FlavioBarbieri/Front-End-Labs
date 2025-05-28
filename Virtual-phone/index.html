@@ -171,3 +171,61 @@
     }
   }
 </script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+  }
+
+  .telefone {
+    background: #1f1f38;
+    padding: 30px 25px;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    width: 320px;
+    text-align: center;
+    user-select: none;
+  }
+
+  #display {
+    background: #292946;
+    border-radius: 15px;
+    padding: 20px 15px;
+    font-size: 2.4rem;
+    letter-spacing: 3px;
+    min-height: 55px;
+    margin-bottom: 25px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.7);
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .botoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  button {
+    background: linear-gradient(145deg, #393974, #2e2e65);
+    border: none;
+    padding: 20px 0;
+    border-radius: 15px;
+    font-size: 1.8rem;
+    color: #c8c8ff;
+    box-shadow: 6px 6px 12px #1a1a3b, -6px -6px 12px #45458c;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    user-select: none;
+    font-weight: 600;
+    text-shadow: 0 0 3px rgba(255,255,255,0.15);
+  }
+</style>
