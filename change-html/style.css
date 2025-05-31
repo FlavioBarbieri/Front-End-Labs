@@ -7,6 +7,15 @@
     --icon-color: #666;  /* Cor do ícone */
 }
 
+/* --- Tema Escuro (Sobrescreve as variáveis quando body.dark-mode está ativo) --- */
+body.dark-mode {
+    --bg-color: #2c3e50; /* Fundo geral escuro */
+    --text-color: #ecf0f1; /* Cor do texto claro */
+    --container-bg: #34495e; /* Fundo do container escuro */
+    --border-color: #555; /* Borda de elementos escuros */
+    --icon-color: #f39c12; /* Cor do ícone em dark mode (um laranja/amarelo) */
+}
+
 /* --- Estilos Globais e Transições --- */
 body {
     font-family: Arial, sans-serif;
@@ -42,28 +51,37 @@ p {
     margin-bottom: 30px;
 }
 
-/* Estilos do botão (ainda sem as transições de dark mode) */
+/* --- Botão de Alternar Tema (com ícone) --- */
 #theme-toggle {
     background: none;
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--border-color); /* Borda visível */
     color: var(--icon-color);
-    font-size: 2rem;
-    padding: 10px;
-    border-radius: 50%;
+    font-size: 2rem; /* Ícone maior */
+    padding: 10px; /* Preenchimento */
+    border-radius: 50%; /* Botão redondo */
     cursor: pointer;
-    display: inline-flex;
+    display: inline-flex; /* Para centralizar o ícone */
     justify-content: center;
     align-items: center;
-    width: 60px;
+    width: 60px; /* Largura e altura iguais para ser um círculo perfeito */
     height: 60px;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 #theme-toggle:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.05); /* Fundo sutil ao passar o mouse */
 }
 
-/* Ícone (ainda sem rotação específica para dark mode) */
+body.dark-mode #theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil ao passar o mouse no dark mode */
+}
+
+
+/* Animação de rotação para o ícone */
 #theme-toggle i {
     transition: transform 0.4s ease-in-out;
+}
+
+body.dark-mode #theme-toggle i {
+    transform: rotate(360deg); /* Rotação ao mudar para dark mode */
 }
