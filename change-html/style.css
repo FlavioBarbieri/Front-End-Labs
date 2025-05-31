@@ -1,0 +1,69 @@
+/* --- Variáveis CSS para Cores (Tema Claro) --- */
+:root {
+    --bg-color: #f0f2f5; /* Fundo geral */
+    --text-color: #333;  /* Cor do texto */
+    --container-bg: #fff; /* Fundo do container principal */
+    --border-color: #ddd; /* Borda de elementos */
+    --icon-color: #666;  /* Cor do ícone */
+}
+
+/* --- Estilos Globais e Transições --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa a altura total da tela */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.container {
+    background-color: var(--container-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%; /* Responsividade básica */
+    transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+    transition: color 0.4s ease-in-out;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+/* Estilos do botão (ainda sem as transições de dark mode) */
+#theme-toggle {
+    background: none;
+    border: 2px solid var(--border-color);
+    color: var(--icon-color);
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Ícone (ainda sem rotação específica para dark mode) */
+#theme-toggle i {
+    transition: transform 0.4s ease-in-out;
+}
