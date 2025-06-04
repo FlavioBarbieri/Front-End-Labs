@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #0969da;
+    --primary-hover: #0a5cc9;
+    --danger-color: #cf222e;
+    --bg-color: #f6f8fa;
+    --card-bg-color: #ffffff;
+    --text-color: #1f2328;
+    --text-muted-color: #57606a;
+    --border-color: #d0d7de;
+    --border-radius: 6px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Estilos para o formulário e spinner */
+#search-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#search-input {
+    flex-grow: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+#search-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    min-height: 50px;
+}
+
+#search-button:hover {
+    background-color: var(--primary-hover);
+}
+
+#search-button:disabled {
+    background-color: #8acaff;
+    cursor: not-allowed;
+}
+
+.spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Estilos para a área de resultado */
+.status {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    background-color: #e6f7ff;
+    border: 1px solid #91d5ff;
+}
+
+.status.error {
+    background-color: #ffebe9;
+    color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+}
+
+.user-card {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 2rem;
+    background-color: var(--card-bg-color);
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.user-avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.user-name { margin: 0; font-size: 1.75rem; }
+.user-login { font-size: 1.25rem; color: var(--text-muted-color); margin: 0.25rem 0 1rem; }
+.user-bio { margin: 1rem 0; }
+.user-stats { display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 1rem 0; color: var(--text-muted-color); }
+.user-stats strong { color: var(--text-color); }
+.user-location { color: var(--text-muted-color); }

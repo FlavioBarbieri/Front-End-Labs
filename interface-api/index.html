@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca Avançada no GitHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Busca de Usuários no GitHub</h1>
+
+        <header id="search-container">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Digite um usuário do GitHub..." required>
+                <button type="submit" id="search-button">Buscar</button>
+            </form>
+        </header>
+
+        <main id="profile-container"></main>
+    </div>
+    
+    <template id="user-card-template">
+        <div class="user-card">
+            <div class="user-avatar">
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    <img src="" alt="">
+                </a>
+            </div>
+            <div class="user-info">
+                <h2 class="user-name"></h2>
+                <p class="user-login"></p>
+                <p class="user-bio"></p>
+                <div class="user-stats">
+                    <span><strong>Seguidores:</strong> <span class="user-followers"></span></span>
+                    <span><strong>Seguindo:</strong> <span class="user-following"></span></span>
+                    <span><strong>Repositórios:</strong> <span class="user-repos"></span></span>
+                </div>
+                <p class="user-location"></p>
+            </div>
+        </div>
+    </template>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
